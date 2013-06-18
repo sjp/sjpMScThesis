@@ -1,0 +1,11 @@
+<%
+writeJSVar <- function(varname, data) {
+    paste0("var ", varname, " = ", toJSON(data), ";\n", sep = "")
+}
+%>
+<%= writeJSVar("gridSVGMappings", gsvg$mappings) %>
+<%= writeJSVar("dists", unname(as.matrix(eurodist))) %>
+<%= writeJSVar("locs", locs) %>
+<%= writeJSVar("xlocs", xlocs) %>
+<%= writeJSVar("ylocs", ylocs) %>
+<%= gsvg$utils %>

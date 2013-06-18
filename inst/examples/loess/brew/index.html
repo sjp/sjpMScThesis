@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+  <title>LOESS Smoother Example</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>LOESS Smoother Example</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <form class="well">
+        <div>
+          <label class="control-label" for="spanalpha">Span: 0.75</label>
+          <input id="spanalpha" type="range" name="spanalpha" value="0.75" min="0.05" max="1" step="0.05"/>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <%= brew("initialPlot") %>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../js/d3-min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

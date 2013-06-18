@@ -1,0 +1,15 @@
+<%
+output <- plotAcfs()
+plotsvg <- saveXML(output$svg, file = NULL)
+# Registering a coordinate system
+gridSVGCoords(output$coords)
+gridSVGMappings(output$mappings)
+mappingsAsJS <- paste0("var gridSVGMappings = ",
+                       toJSON(output$mappings),
+                       ";\n")
+%>
+<%= plotsvg %>
+<script type="text/javascript">
+<%= mappingsAsJS %>
+<%= output$utils %>
+</script>

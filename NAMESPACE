@@ -1,0 +1,6 @@
+export(thesisExample)
+export(stopThesisExample)
+export(listThesisExamples)
+export(getExampleOption)
+export(getExampleOptions)
+export(setExampleOptions)

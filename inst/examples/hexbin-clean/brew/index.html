@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hexagonal Binning Example</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              <div class="span8">
+                <h1>Hexagonal Binning Example</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Add margin-top to space right next to the plot -->
+                <div class="span2" style="margin-top:180px">
+                    <button class="btn btn-large btn-block">Colour</button>
+                    <button class="btn btn-large btn-block">Area</button>
+                </div>
+                <div class="span5">
+                    <%= brew("svg") %>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/d3-min.js"></script>
+        <script type="text/javascript">
+            <%= brew("data") %>
+        </script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    </body>
+</html>

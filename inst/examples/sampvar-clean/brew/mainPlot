@@ -1,0 +1,17 @@
+<%
+
+# Getting the original plot
+output <- firstSVG(dataset())
+
+# Wiping out existing coords defs and inserting our own
+gridSVGCoords(NA)
+gridSVGCoords(output$coords)
+gridSVGMappings(output$mappings)
+
+%>
+<%= saveXML(output$svg, indent = FALSE) %>
+<script type="text/javascript">
+<%= paste0("var gridSVGMappings = ",
+           toJSON(output$mappings), ";\n") %>
+<%= output$utils %>
+</script>

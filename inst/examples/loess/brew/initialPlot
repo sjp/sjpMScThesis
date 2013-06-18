@@ -1,0 +1,12 @@
+<%
+
+pdf(file = NULL)                               
+print(qplot(xs, ys))
+svgplot <- grid.export("")
+dev.off()
+gridSVGCoords(svgplot$coords)
+gridSVGMappings(svgplot$mappings)
+panelvp <<- getSVGMappings("layout::panel.3-4-3-4", "vp")
+
+%>
+<%= saveXML(svgplot$svg, file = NULL) %>
