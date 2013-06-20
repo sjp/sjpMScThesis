@@ -14,12 +14,12 @@ var drawParams = function(obj) {
 };
 
 var updateParams = function() {
-    var p = $("#arma-p").val();
-    var d = $("#arma-d").val();
-    var q = $("#arma-q").val();
+    var p = $("#arima-p").val();
+    var d = $("#arima-d").val();
+    var q = $("#arima-q").val();
     
     $.ajax({
-        url: "/custom/arma/brew/acf?" + $.param({
+        url: "/custom/arima/brew/acf?" + $.param({
             p: p,
             d: d,
             q: q
@@ -122,9 +122,9 @@ var drawUpdatedDataset = function(obj) {
         .attr("points", function(d) { return d; });
 
     // Reset to zero for all ARMA params
-    $("#arma-p").val(0);
-    $("#arma-d").val(0);
-    $("#arma-q").val(0);
+    $("#arima-p").val(0);
+    $("#arima-d").val(0);
+    $("#arima-q").val(0);
 };
 
 var changeDataset = function() {
@@ -132,7 +132,7 @@ var changeDataset = function() {
     var fd = new FormData();
     fd.append("dataset", dataset);
     $.ajax({
-        url: "/custom/arma/brew/loadDataset?p=0&d=0&q=0",
+        url: "/custom/arima/brew/loadDataset?p=0&d=0&q=0",
         type: "POST",
         data: fd,
         contentType: false,
@@ -144,5 +144,5 @@ var changeDataset = function() {
 d3.select("#dataset")
     .on("change", changeDataset);
 
-d3.selectAll("#arma-p, #arma-d, #arma-q")
+d3.selectAll("#arima-p, #arima-d, #arima-q")
     .on("change", updateParams);
