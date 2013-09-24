@@ -1,4 +1,6 @@
 suppressPackageStartupMessages({
+    library(grid)
+    library(XML)
     library(Rook)
     library(gridSVG)
     library(ggplot2)

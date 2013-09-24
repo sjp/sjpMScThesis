@@ -1,5 +1,8 @@
 # Load required packages
 suppressPackageStartupMessages({
+    library(grid)
+    library(RJSONIO)
+    library(XML)
     library(gridSVG)
     library(Rook)
     library(animaker)

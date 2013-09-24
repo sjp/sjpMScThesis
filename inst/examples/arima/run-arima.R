@@ -1,5 +1,8 @@
 # Loading required packages, quietly
 suppressPackageStartupMessages({
+    library(grid)
+    library(RJSONIO)
+    library(XML)
     library(gridSVG)
     library(selectr)
     library(Rook)

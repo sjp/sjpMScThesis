@@ -1,4 +1,6 @@
 suppressPackageStartupMessages({
+    library(grid)
+    library(XML)
     library(shiny)
     library(selectr)
     library(ggplot2)

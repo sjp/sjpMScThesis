@@ -1,4 +1,5 @@
 var loctext = getSVGMappings("loctext", "grob", "selector")[0];
+var locpoints = getSVGMappings("locpoints", "grob", "selector")[0];
 var moveText = function(d, i) {
     // Also modify the table showing distances between locations
     modifyTableValues(d, i);

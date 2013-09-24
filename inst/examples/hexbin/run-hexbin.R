@@ -1,4 +1,7 @@
 suppressPackageStartupMessages({
+    library(grid)
+    library(RJSONIO)
+    library(XML)
     library(Rook)
     library(gridSVG)
     library(hexbin)
