@@ -74,9 +74,8 @@ var showAnimation = function(obj) {
             .get(0)
             .cloneNode(true);
 
-        //var sel = "#wrapper\\:\\:animation\\.field\\:\\:stat\\.3";
         var sel = getSVGMappings("wrapper::animation.field::stat",
-                                 "vp", "selector")[2];
+                                 "vp", "selector")[0];
         d3.select(sel)
             .append("circle")
             .attr({
@@ -125,7 +124,7 @@ var showAnimation = function(obj) {
         newLine.id = "sampLine";
         var ld = [obj.sampLines.lineXs[iter],
                   obj.sampLines.lineYs[0],
-                  obj.sampLines.lineYs[1]]
+                  obj.sampLines.lineYs[1]];
         var lp = ld[0] + "," + ld[1] + " " + ld[0] + "," + ld[2];
         newLine.setAttribute("points", lp);
         var imageSel = getSVGMappings("image", "grob", "selector")[0];

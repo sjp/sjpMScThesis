@@ -7,7 +7,7 @@ genSampleLocs <- function(samps) {
     # Open a null dev to calc stackPoints from (need vps)
     pdf(file = NULL)
     grid.newpage()
-    vpname <- getSVGMappings("wrapper::animation.field::sample", "vp")[3]
+    vpname <- getSVGMappings("wrapper::animation.field::sample", "vp")
     tmpvp <- viewportCreate(vpname, "sample")
     pushViewport(tmpvp)
     for (i in 1:nrow(samps)) {
@@ -30,7 +30,7 @@ genStatPoints <- function(stats) {
     # Open a null dev to calc stackPoints from (need vps)
     pdf(file = NULL)
     grid.newpage()
-    vpname <- getSVGMappings("wrapper::animation.field::stat", "vp")[2]
+    vpname <- getSVGMappings("wrapper::animation.field::stat", "vp")
     tmpvp <- viewportCreate(vpname, "stat")
     pushViewport(tmpvp)
     yys <- stackPoints(stats, vp = vpPath("stat"), y.min = 0,
@@ -55,7 +55,7 @@ genStatPoints <- function(stats) {
 }
 
 genSampleStatData <- function(stats) {
-    vpname <- getSVGMappings("wrapper::animation.field::sample", "vp")[3]
+    vpname <- getSVGMappings("wrapper::animation.field::sample", "vp")
     lineXs <- viewportConvertX(vpname, stats, "native")
     ghostLineYs <- viewportConvertY(vpname, c(0.15, 0.35), "npc")
     lineYs <- viewportConvertY(vpname, c(0.05, 0.5), "npc")
